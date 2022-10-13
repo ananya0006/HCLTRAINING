@@ -1,0 +1,38 @@
+import java.util.Scanner;
+class HotelDriver
+{
+	public static void main(String[] args)
+	{
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the capacity");
+		int capacity=s.nextInt();
+		System.out.println("Enter the Hotel name");
+		String name =s.next();
+		System.out.println("Enter the owner name");
+		String owner_name =s.next();
+		Hotel h= new Hotel(capacity,name,owner_name);
+		boolean exit=true;
+		while(exit)
+		{
+			
+		System.out.println("Enter the operation to be performed");
+		System.out.println("1.BookOrder\n 2.Swiggy Details\n 3.Hotel Details\n 4.CancelOrder\n");
+		int choice=s.nextInt();
+		switch(choice)
+		{
+			case 1: h.BookOrder();
+			break;
+			case 2: h.ShowSwiggyDetails();
+			break;
+			case 3: h.ShowHotelDetails();
+			break;
+			case 4:h.CancelOrder();
+			break;
+			case 5:exit=false;
+			break;
+			default:System.out.println("Enter the numbers shown above");
+                                 }
+                     }
+          }
+
+}

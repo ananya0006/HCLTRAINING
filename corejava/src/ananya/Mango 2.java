@@ -1,0 +1,5 @@
+class Mango extends Fruit
+{
+
+
+}
